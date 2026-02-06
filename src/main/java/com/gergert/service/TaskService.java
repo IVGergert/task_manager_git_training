@@ -21,13 +21,22 @@ public class TaskService {
         }
     }
 
-    public void deleteTask(int indexTask) {
-        System.out.println("--- YOUR TASKS ---");
+    public void deleteTaskById(int id) {
+        System.out.println("--- Delete TASK ---");
 
-        tasks.remove(indexTask);
-        System.out.println("Success: Task removed!");
+        Task taskToRemove = null;
+        for (Task task : tasks){
+            if (task.getId() == id){
+                taskToRemove = task;
+                break;
+            }
+        }
+
+        if (taskToRemove != null){
+            tasks.remove(id);
+            System.out.println("Task with ID " + id + " deleted.");
+        } else {
+            System.out.println("Task with ID " + id + " not found!");
+        }
     }
-
-
-
 }
