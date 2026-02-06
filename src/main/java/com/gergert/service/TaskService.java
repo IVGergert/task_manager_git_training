@@ -20,4 +20,14 @@ public class TaskService {
             System.out.println(task.toString());
         }
     }
+
+    public void deleteTask(int indexTask) {
+        System.out.println("--- YOUR TASKS ---");
+
+        tasks.remove(indexTask);
+        System.out.println("Success: Task removed!");
+    }
+
+
+
 }
