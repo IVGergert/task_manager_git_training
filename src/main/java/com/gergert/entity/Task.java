@@ -1,5 +1,7 @@
 package com.gergert.entity;
 
+import java.util.StringJoiner;
+
 public class Task {
     private String description;
     private boolean isDone;
@@ -17,7 +19,11 @@ public class Task {
         return isDone;
     }
 
-    public String getFullInfo() {
-        return "TODO: " + description;
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Task.class.getSimpleName() + "[", "]")
+                .add("description = '" + description + "'")
+                .add("isDone = " + isDone)
+                .toString();
     }
 }

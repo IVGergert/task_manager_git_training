@@ -12,4 +12,12 @@ public class TaskService {
         tasks.add(new Task(description));
         System.out.println("Success: Task added!");
     }
+
+    public void printAllTasks() {
+        System.out.println("--- YOUR TASKS ---");
+
+        for (Task task : tasks) {
+            System.out.println(task.toString());
+        }
+    }
 }
