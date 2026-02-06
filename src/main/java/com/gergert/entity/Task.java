@@ -16,4 +16,8 @@ public class Task {
     public boolean isDone() {
         return isDone;
     }
+
+    public String getFullInfo() {
+        return "TODO: " + description;
+    }
 }
